@@ -1,14 +1,12 @@
-dev find_anagram(word, anagram)
-    str1 = word
-    str2 = anagram
-    sorted_str1 = sorted(str1)
-    sorted_str2 = sorted(str2)
 
-    if sorted(str1) == sorted(str2):
+def find_anagram(word, anagram):
+    word = word.replace(" ", "")
+    anagram = anagram.replace(" ", "")
+    if sorted(word) == sorted(anagram):
         return True
     else:
-        return False 
+        return False
 
-    
+
 print(find_anagram("hello", "check"))
 print(find_anagram("below", "elbow"))
